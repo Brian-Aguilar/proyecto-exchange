@@ -1,22 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <navbar />
+  <content />
 </template>
 
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script >
+import Navbar from './components/Navbar.vue'
+import Content from './components/Content.vue'
 
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+export default {
+  components: {
+    Navbar,
+    Content
+  }
+}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+<style lang="scss">
+@import 'assets/base.scss';
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
+  font-size: 16px;
+  color: $black;
+  background-color: $background;
+}
+
+#app {
+  height: 100%;
 }
 </style>
